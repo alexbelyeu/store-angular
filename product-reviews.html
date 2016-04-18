@@ -1,0 +1,10 @@
+<div class="panel" ng-show="panel.isSelected(3)">
+  <h4>Reviews</h4>
+  <blockquote ng-repeat="review in product.reviews">
+  	<b>Stars: {{review.stars}}</b>
+  	{{review.body}}
+  	<cite>by: {{review.author}} on {{review.createdOn | date}}</cite>
+  </blockquote>
+  <form name="reviewForm" class="form-group" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" product-review-form novalidate>       
+  </form>
+</div>
